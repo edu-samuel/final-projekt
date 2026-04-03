@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ── HEADER ── */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background-color: #a89070;
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 반투명 어두운 레이어 */
+.hero-overlay {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.hero-overlay h1 {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 28px;
+  max-width: 600px;
+}
+
+/* ── 흰 카드 ── */
+.hero-card {
+  background-color: white;
+  border-radius: 18px;
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 580px;
+}
+
+#ingredient-input {
+  width: 100%;
+  padding: 13px 18px;
+  border: 1.5px solid #dde2ee;
+  border-radius: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  background-color: #f8faff;
+}
+
+#ingredient-input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* ── 필터 버튼 ── */
+.filter-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1.5px solid #dde2ee;
+  background-color: white;
+  color: #4b5563;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.filter-btn.active {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+/* ── 검색 버튼 ── */
+.search-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* ── FOOTER ── */
+footer {
+  background-color: #1a1f36;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ── 햄버거 버튼 ── */
+#hamburger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  position: absolute;
+  top: 20px;
+  right: 24px;
+}
+
+#hamburger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* ── 사이드 패널 ── */
+#side-panel {
+  position: fixed;
+  top: 0;
+  right: -20%;
+  width: 20%;
+  height: 100vh;
+  background-color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 100;
+  transition: right 0.3s ease;
+}
+
+#side-panel.open {
+  right: 0;
+}
+
+#side-panel a {
+  color: #1a1f36;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#side-panel a:hover {
+  color: #2563eb;
+}
+
+#close-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #1a1f36;
+  text-align: right;
+  align-self: flex-end;
+}
+
+#close-btn:hover {
+  color: #2563eb;
+}
+
+
+/* ── OM OSS SIDA ── */
+.about-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-section h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1a1f36;
+}
+
+.about-section h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1f36;
+  margin-top: 16px;
+}
+
+.about-section p {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.7;
+}

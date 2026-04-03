@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FridgeChef</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <nav>
+      <ul>
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="search.html">Sök recept</a></li>
+        <li><a href="about.html">Om oss</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a href="index.html" class="logo">🍳 FridgeChef</a>
+  </div>
+
+<!-- 햄버거 버튼 -->
+    <button id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+<!-- 사이드 메뉴 패널 -->
+<div id="side-panel">
+  <button id="close-btn">✕</button>
+  <a href="#">Logga in</a>
+  <a href="#">Bli medlem</a>
+</div>
+</header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+  <div class="hero-overlay">
+    <h1>Hitta goda recept med ingredienser du har hemma!</h1>
+
+    <div class="hero-card">
+      <input type="text" id="ingredient-input" placeholder="Skriv in ingredienser du har hemma...">
+
+      <div class="filter-row">
+        <button class="filter-btn active">Mat</button>
+        <button class="filter-btn">Efterrätt</button>
+        <button class="filter-btn">Europeisk</button>
+        <button class="filter-btn">asiantisk</button>
+        <button class="filter-btn">Afrikansk</button>
+      </div>
+
+      <button class="search-btn">Sök recept ›</button>
+    </div>
+  </div>
+</section>
+  </main>
+<script src="app.js"></script>
+</body>
+</html>
+
