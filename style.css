@@ -64,7 +64,7 @@ nav ul li a:hover {
   justify-content: center;
 }
 
-/* 반투명 어두운 레이어 */
+/* genomskinligt bakgrund */
 .hero-overlay {
   min-height: 100vh;
   width: 100%;
@@ -85,7 +85,7 @@ nav ul li a:hover {
   max-width: 600px;
 }
 
-/* ── 흰 카드 ── */
+/* ── vit kort ── */
 .hero-card {
   background-color: white;
   border-radius: 18px;
@@ -110,7 +110,7 @@ nav ul li a:hover {
   outline: none;
 }
 
-/* ── 필터 버튼 ── */
+/* ── filter knapp ── */
 .filter-row {
   display: flex;
   gap: 8px;
@@ -142,7 +142,7 @@ nav ul li a:hover {
   color: white;
 }
 
-/* ── 검색 버튼 ── */
+/* ── sök knapp ── */
 .search-btn {
   width: 100%;
   padding: 15px;
@@ -169,7 +169,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ── 햄버거 버튼 ── */
+/* ── hamburgare menu ── */
 #hamburger {
   background-color: transparent;
   border: none;
@@ -191,7 +191,7 @@ footer {
   border-radius: 3px;
 }
 
-/* ── 사이드 패널 ── */
+/* ── side panel ── */
 #side-panel {
   position: fixed;
   top: 0;
@@ -234,134 +234,4 @@ footer {
 
 #close-btn:hover {
   color: #2563eb;
-}
-
-
-/* ── OM OSS SIDA ── */
-.about-hero {
-  min-height: 100vh;
-  background-color: #a89070;
-  background-image: url('hero.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about-overlay {
-  min-height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 120px 24px 80px;
-  gap: 16px;
-}
-
-.about-overlay h1 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: white;
-}
-
-.about-overlay h2 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: white;
-  margin-top: 16px;
-}
-
-.about-overlay p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 600px;
-}
-
-.about-section h1 {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #1a1f36;
-}
-
-.about-section h2 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #1a1f36;
-  margin-top: 16px;
-}
-
-.about-section p {
-  color: #4b5563;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-
-/* ── KONTAKT SIDA ── */
-.contact-hero {
-  min-height: 100vh;
-  background-color: #a89070;
-  background-image: url('hero.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-overlay {
-  min-height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 120px 24px 80px;
-  gap: 24px;
-}
-
-.contact-overlay h1 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: white;
-}
-
-.contact-desc {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 500px;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 16px 28px;
-  border-radius: 12px;
-}
-
-.contact-item span {
-  font-size: 1.4rem;
-}
-
-.contact-item p {
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
 }
