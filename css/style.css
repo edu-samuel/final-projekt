@@ -56,7 +56,7 @@ nav ul li a:hover {
 .hero {
   min-height: 100vh;
   background-color: #a89070;
-  background-image: url('hero.jpg');
+  background-image: url('../hero.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
