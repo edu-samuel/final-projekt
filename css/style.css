@@ -10,13 +10,16 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-/* ── HEADER ── */
 header {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
+}
+
+#resultat {
+  padding-top: 80px;
 }
 
 .header-inner {
@@ -29,7 +32,7 @@ header {
 }
 
 .logo {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 1.3rem;
   font-weight: 900;
   text-decoration: none;
@@ -38,7 +41,7 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 24px;
+  gap: 24px;  
 }
 
 nav ul li a {
@@ -52,7 +55,6 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* ── HERO ── */
 .hero {
   min-height: 100vh;
   background-color: #a89070;
@@ -64,7 +66,6 @@ nav ul li a:hover {
   justify-content: center;
 }
 
-/* genomskinligt bakgrund */
 .hero-overlay {
   min-height: 100vh;
   width: 100%;
@@ -85,7 +86,6 @@ nav ul li a:hover {
   max-width: 600px;
 }
 
-/* ── vit kort ── */
 .hero-card {
   background-color: white;
   border-radius: 18px;
@@ -110,7 +110,6 @@ nav ul li a:hover {
   outline: none;
 }
 
-/* ── filter knapp ── */
 .filter-row {
   display: flex;
   gap: 8px;
@@ -142,7 +141,6 @@ nav ul li a:hover {
   color: white;
 }
 
-/* ── sök knapp ── */
 .search-btn {
   width: 100%;
   padding: 15px;
@@ -160,7 +158,6 @@ nav ul li a:hover {
   background-color: #1d4ed8;
 }
 
-/* ── FOOTER ── */
 footer {
   background-color: #1a1f36;
   color: white;
@@ -169,69 +166,4 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ── hamburgare menu ── */
-#hamburger {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 8px;
-  position: absolute;
-  top: 20px;
-  right: 24px;
-}
 
-#hamburger span {
-  display: block;
-  width: 24px;
-  height: 3px;
-  background-color: white;
-  border-radius: 3px;
-}
-
-/* ── side panel ── */
-#side-panel {
-  position: fixed;
-  top: 0;
-  right: -20%;
-  width: 20%;
-  height: 100vh;
-  background-color: white;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  z-index: 100;
-  transition: right 0.3s ease;
-}
-
-#side-panel.open {
-  right: 0;
-}
-
-#side-panel a {
-  color: #1a1f36;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-#side-panel a:hover {
-  color: #2563eb;
-}
-
-#close-btn {
-  background-color: transparent;
-  border: none;
-  font-size: 1.3rem;
-  cursor: pointer;
-  color: #1a1f36;
-  text-align: right;
-  align-self: flex-end;
-}
-
-#close-btn:hover {
-  color: #2563eb;
-}

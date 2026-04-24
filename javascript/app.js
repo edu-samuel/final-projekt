@@ -1,11 +1,118 @@
-const hamburger = document.getElementById('hamburger');
-const sidePanel = document.getElementById('side-panel');
-const closeBtn = document.getElementById('close-btn');
+const typeButtons = document.querySelectorAll(".type-btn");
 
-hamburger.addEventListener('click', function() {
-  sidePanel.classList.toggle('open');
+typeButtons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    typeButtons.forEach(function (b) {
+      b.classList.remove("active");
+    });
+    btn.classList.add("active");
+  });
 });
 
-closeBtn.addEventListener('click', function() {
-  sidePanel.classList.remove('open');
+const regionButtons = document.querySelectorAll(".region-btn");
+
+regionButtons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    regionButtons.forEach(function (b) {
+      b.classList.remove("active");
+    });
+    btn.classList.add("active");
+  });
 });
+
+const API_KEY = "bdb84ea176f341e6884d077c534a35f0";
+
+const searchBtn = document.querySelector(".search-btn");
+
+searchBtn.addEventListener("click", function () {
+  const ingredient = document.getElementById("ingredient-input").value;
+
+  if (ingredient === "") {
+    alert("Skriv in minst en ingrediens!");
+    return;
+  }
+
+  const activeType = document.querySelector(".type-btn.active");
+  const type = activeType ? activeType.textContent : "Mat";
+
+  let mealType = "main course";
+  if (type === "Efterrätt") {
+    mealType = "dessert";
+  }
+
+  const activeRegion = document.querySelector(".region-btn.active");
+  const region = activeRegion ? activeRegion.textContent : "";
+
+  let cuisine = "";
+  if (region === "Europeisk") {
+    cuisine = "European";
+  } else if (region === "Asiatisk") {
+    cuisine = "Asian";
+  } else if (region === "Afrikansk") {
+    cuisine = "African";
+  }
+
+  const url =
+    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" +
+    API_KEY +
+    "&includeIngredients=" +
+    ingredient +
+    "&type=" +
+    mealType +
+    "&cuisine=" +
+    cuisine +
+    "&number=10";
+
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      visaResultat(data.results);
+    })
+    .catch(function () {
+      alert("Något gick fel. Försök igen!");
+    });
+});
+
+function visaResultat(recipes) {
+  document.querySelector(".hero").style.display = "none";
+
+  let resultatDiv = document.getElementById("resultat");
+
+  if (!resultatDiv) {
+    resultatDiv = document.createElement("div");
+    resultatDiv.id = "resultat";
+    document.querySelector("main").appendChild(resultatDiv);
+  }
+
+  resultatDiv.innerHTML = "";
+
+  if (recipes.length === 0) {
+    resultatDiv.innerHTML =
+      "<p>Inga recept hittades. Prova andra ingredienser!</p>";
+    return;
+  }
+
+  recipes.forEach(function (recipe) {
+    const kort = document.createElement("div");
+    kort.className = "recept-kort";
+
+    const img = document.createElement("img");
+    img.src = recipe.image;
+    img.alt = recipe.title;
+
+    const titel = document.createElement("h3");
+    titel.textContent = recipe.title;
+
+    kort.addEventListener("click", function () {
+      window.location.href = "detail.html?id=" + recipe.id;
+    });
+
+    kort.style.cursor = "pointer";
+
+    kort.appendChild(img);
+    kort.appendChild(titel);
+    resultatDiv.appendChild(kort);
+  });
+}
