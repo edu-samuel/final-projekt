@@ -1,17 +1,48 @@
+body {
+  background-color: #99814a;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
 #recept-detalj {
   max-width: 700px;
-  margin: 0 ;
+  margin: 0 auto;
   padding: 100px 24px 60px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
+}
+
+#recept-detalj img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+#recept-detalj h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
 }
 
 #recept-detalj h2 {
   font-size: 1.4rem;
   font-weight: 900;
-  color: #f2f2f2;
+  color: white;
   margin-top: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3b4968;
+}
+
+#recept-detalj p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
 }
 
 #recept-detalj ul {
@@ -23,18 +54,6 @@
 }
 
 #recept-detalj ul li {
-  color: #f4f4f4;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.95rem;
-}
-
-body{
-    background-color: rgb(96, 62, 62);
-}
-
-#recept-detalj p {
-  color: white;
-}
-
-#recept-detalj ul li {
-  color: white;
 }
