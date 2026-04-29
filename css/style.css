@@ -11,15 +11,11 @@ body {
 }
 
 header {
-  background-color: rgb(125, 89, 43);
+  background-color: rgb(83, 57, 20);
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
-}
-
-#resultat {
-  padding-top: 80px;
 }
 
 .header-inner {

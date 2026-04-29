@@ -1,9 +1,9 @@
 #resultat {
-  padding-top: 70px;
+  padding-top: 80px;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 40px;
-  background-color: rgb(84, 51, 51);
+  background-color:#99814a;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
