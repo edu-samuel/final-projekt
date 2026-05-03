@@ -15,7 +15,6 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
 }
 
 .header-inner {
@@ -153,13 +152,4 @@ nav ul li a:hover {
 .search-btn:hover {
   background-color: #1d4ed8;
 }
-
-footer {
-  background-color: #1a1f36;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
 
