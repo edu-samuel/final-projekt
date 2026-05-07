@@ -41,22 +41,3 @@
   line-height: 1.7;
   max-width: 600px;
 }
-
-.about-section h1 {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #1a1f36;
-}
-
-.about-section h2 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #1a1f36;
-  margin-top: 16px;
-}
-
-.about-section p {
-  color: #4b5563;
-  font-size: 1rem;
-  line-height: 1.7;
-}

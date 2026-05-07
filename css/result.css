@@ -3,12 +3,12 @@
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 40px;
-  background-color:#99814a;
-  display: flex;
+  background-color: #99814a;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
   display: none;
+  min-height: 100vh;
 }
 
 .recept-kort {
