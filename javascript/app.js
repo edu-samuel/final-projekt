@@ -77,14 +77,8 @@ searchBtn.addEventListener("click", function () {
 
 function visaResultat(recipes) {
   document.querySelector(".hero").style.display = "none";
-
-  let resultatDiv = document.getElementById("resultat");
-
-  if (!resultatDiv) {
-    resultatDiv = document.createElement("div");
-    resultatDiv.id = "resultat";
-    document.querySelector("main").appendChild(resultatDiv);
-  }
+  const resultatDiv = document.getElementById("resultat");
+ resultatDiv.style.display = "flex";
 
   resultatDiv.innerHTML = "";
 
