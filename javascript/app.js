@@ -33,7 +33,7 @@ searchBtn.addEventListener("click", function () {
   }
 
   const activeType = document.querySelector(".type-btn.active");
-  const type = activeType ? activeType.textContent : "Mat";
+  const type = activeType ? activeType.textContent : "";
 
   let mealType = "main course";
   if (type === "Efterrätt") {
