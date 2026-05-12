@@ -40,8 +40,31 @@
               <p>hej@fridgechef.se</p>
             </div>
           </div>
+          <form id="contact-form">
+            <input
+              type="text"
+              id="form-name"
+              placeholder="Ditt namn"
+              required
+            />
+            <input
+              type="email"
+              id="form-email"
+              placeholder="Din e-post"
+              required
+            />
+            <input type="text" id="form-subject" placeholder="Ämne" required />
+            <textarea
+              id="form-message"
+              placeholder="Skriv ditt meddelande här..."
+              rows="5"
+              required
+            ></textarea>
+            <button type="submit">Skicka ›</button>
+          </form>
         </div>
       </section>
     </main>
+    <script src="../javascript/contact.js"></script>
   </body>
 </html>

@@ -76,10 +76,9 @@ searchBtn.addEventListener("click", function () {
 });
 
 function visaResultat(recipes) {
-  document.querySelector(".hero").style.display = "none";
   const resultatDiv = document.getElementById("resultat");
  resultatDiv.style.display = "flex";
-
+ resultatDiv.scrollIntoView({ behavior: 'smooth' });
   resultatDiv.innerHTML = "";
 
   if (recipes.length === 0) {
@@ -88,25 +87,23 @@ function visaResultat(recipes) {
     return;
   }
 
-  recipes.forEach(function (recipe) {
-    const kort = document.createElement("div");
-    kort.className = "recept-kort";
+  recipes.forEach(function(recipe) {
+  const link = document.createElement('a');
+  link.href = 'detail.html?id=' + recipe.id;
 
-    const img = document.createElement("img");
-    img.src = recipe.image;
-    img.alt = recipe.title;
+  const kort = document.createElement('div');
+  kort.className = 'recept-kort';
 
-    const titel = document.createElement("h3");
-    titel.textContent = recipe.title;
+  const img = document.createElement('img');
+  img.src = recipe.image;
+  img.alt = recipe.title;
 
-    kort.addEventListener("click", function () {
-      window.location.href = "detail.html?id=" + recipe.id;
-    });
+  const titel = document.createElement('h3');
+  titel.textContent = recipe.title;
 
-    kort.style.cursor = "pointer";
-
-    kort.appendChild(img);
-    kort.appendChild(titel);
-    resultatDiv.appendChild(kort);
-  });
+  kort.appendChild(img);
+  kort.appendChild(titel);
+  link.appendChild(kort);
+  resultatDiv.appendChild(link);
+});
 }
